@@ -24,7 +24,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeon_sung"
         android:text="Waves Of Food"
-        android:textColor="@color/textColor"
+        android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
