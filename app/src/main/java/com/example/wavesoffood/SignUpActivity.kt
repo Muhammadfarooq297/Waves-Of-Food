@@ -14,7 +14,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.alreadyaccountButton.setOnClickListener {
-            val intent= Intent(this,LoginActivity::class.java)
+            val intent= Intent(this,ChooseLocationActivity::class.java)
             startActivity(intent)
         }
     }
