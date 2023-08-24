@@ -27,8 +27,50 @@ private val itemQuantities = IntArray(cartItems.size){1}
                 cartitemPrice.text=cartItemsPrice[position]
                 cartImage.setImageResource(cartImages[position])
                 cartQuantity.text=quantity.toString()
+
+                binding.minusButton.setOnClickListener {
+                    decreaseQuantity(position)
+
+                }
+                binding.plusButton.setOnClickListener {
+                    increaseQuantity(position)
+                }
+                binding.deleteButton.setOnClickListener {
+                    val itemPosition=adapterPosition
+                    if(itemPosition!=RecyclerView.NO_POSITION)
+                    {
+                        deleteItem(itemPosition)
+                    }
+
+                }
             }
 
+        }
+
+        private fun increaseQuantity(position: Int)
+        {
+             if(itemQuantities[position]<10)
+             {
+                 itemQuantities[position]++
+                 binding.cartQuantity.text=itemQuantities[position].toString()
+             }
+        }
+        private fun decreaseQuantity(position: Int)
+        {
+            if(itemQuantities[position]>1)
+            {
+                itemQuantities[position]--
+                binding.cartQuantity.text=itemQuantities[position].toString()
+            }
+
+        }
+        private fun deleteItem(position: Int)
+        {
+           cartItems.removeAt(position)
+           cartItemsPrice.removeAt(position)
+           cartImages.removeAt(position)
+            notifyItemChanged(position)
+            notifyItemRangeChanged(position,cartItems.size)
         }
 
     }
