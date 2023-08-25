@@ -16,6 +16,7 @@ class PopularAdapter(private val items:List<String>,private val prices:List<Stri
         val price=prices[position]
         val image=images[position]
         holder.bind(item,price,image)
+
     }
 
     override fun getItemCount(): Int {
