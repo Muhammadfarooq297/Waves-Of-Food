@@ -34,7 +34,7 @@ class SearchFragment : Fragment() {
     private val filteredMenuImage= mutableListOf<Int>()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding=FragmentSearchBinding.inflate(layoutInflater,container,false)
-        adapter= menuAdapter(filteredMenuFoodName,filteredMenuItemPrice,filteredMenuImage)
+        adapter= menuAdapter(filteredMenuFoodName,filteredMenuItemPrice,filteredMenuImage,requireContext())
         binding.menuRecyclerView.layoutManager=LinearLayoutManager(requireContext())
         binding.menuRecyclerView.adapter=adapter
 
