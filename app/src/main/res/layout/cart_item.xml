@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:fontFamily="@font/yeon_sung"
+                android:textSize="16sp"
                 android:text="TextView"
                 app:layout_constraintBottom_toTopOf="@+id/cartitemPrice"
                 app:layout_constraintStart_toEndOf="@+id/cartImage"
